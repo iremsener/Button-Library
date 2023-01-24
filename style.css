@@ -1,0 +1,85 @@
+/* one button */
+
+.one{
+    display: inline-block;
+    position: relative;
+    color: rgb(23, 1, 44);
+    background: #e5b6f1;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 20px 30px;
+    margin: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.one:before{
+    content: "";
+    position: absolute;
+    background: blueviolet;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.one:hover{
+    color: #120217;
+}
+.one:before{
+    top: 100%;
+    left: 100%;
+    transition: 0.7s;
+}
+.one:hover:before{
+    top: -25px;
+    left: -25px;
+}
+.one:active:before{
+    background: blueviolet;
+    transition: 0s;
+}
+
+/* two button */
+
+.two{
+    --color:#291fb0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color);
+    padding: 18px 40px;
+    margin-top: 20px;
+    border: 3px solid var(--color);
+}
+.two::before,
+.two::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    border: inherit;
+    transition: width .25s .15s, height .25s;
+}
+.two::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+.two::after{
+    bottom: -15px;
+    left: -15px;
+    border-width: 0 3px 3px 0;
+}
+.two:hover::before,
+.two:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+    
+}
+
+/* three button */
+
